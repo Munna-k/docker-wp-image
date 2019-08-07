@@ -1,12 +1,6 @@
-FROM ubuntu:16.04
-#RUN apt update
-RUN apt install apache2 -y
-RUN apt install tree -y
-#RUN apt install php php-cgi libapache2-mod-php php-common php-pear php-mbstring -y
-RUN apt install nagios3 nagios-plugins-basic -y
-RUN chgrp -R www-data /var/lib/nagios3
-RUN chmod 750 /var/lib/nagios3/rw
-RUN chmod 750 /var/lib/nagios3/rw
-RUN systemctl restart apache2.service
-
-
+FROM ubuntu:14.04
+RUN apt-get update
+RUN apt-get install -y python
+RUN apt-get install -y python-pip
+RUN apt-get clean
+RUN pip install flask
