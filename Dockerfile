@@ -4,3 +4,4 @@ RUN apt-get install -y python
 RUN apt-get install -y python-pip
 RUN apt-get clean
 RUN pip install flask
+#auto build test
